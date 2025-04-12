@@ -92,7 +92,7 @@ const WeatherCard = ({ weatherData, forecastData }) => {
         <div>
           <h3 className="text-xl font-semibold mb-4">5-Day Forecast</h3>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-            {forecastData.slice(0, 5).map((day, index) => (
+            {forecastData?.slice(0, 5)?.map((day, index) => (
               <div key={index} className="rounded-lg border bg-card text-card-foreground shadow">
                 <div className="p-3 bg-gradient-to-br from-indigo-400 to-blue-500 text-white text-center">
                   <p className="font-medium">{formatDate(day.date)}</p>
