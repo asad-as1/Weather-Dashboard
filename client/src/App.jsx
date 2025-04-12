@@ -20,7 +20,7 @@ function App() {
 
     try {
       const res = await axios.get(
-        `http://localhost:5000/api/weather?city=${searchCity}`
+        `${import.meta.env.VITE_URL}/api/weather?city=${searchCity}`
       );
       
       if (res.data) {
@@ -30,7 +30,7 @@ function App() {
       }
 
       const resdata = await axios.get(
-        `http://localhost:5000/api/forecast?city=${searchCity}`
+        `${import.meta.env.VITE_URL}/api/forecast?city=${searchCity}`
       );
       
       if (resdata.data) {
